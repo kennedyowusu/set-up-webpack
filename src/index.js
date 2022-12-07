@@ -1,8 +1,12 @@
-import './styles/main.scss';
-import test from './test';
-import logo from './assets/Logo.svg';
+import _ from 'lodash';
 
-const logoImg = document.getElementById('logo');
-logoImg.src = logo;
+function component() {
+  var element = document.createElement('div');
 
-console.log(test());
+  // Lodash, now imported by this script
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+  return element;
+}
+
+document.body.appendChild(component());
